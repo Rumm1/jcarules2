@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JCA AITU – Chat Rules</title>
+  <style>
+    /* 🌸 Общий стиль */
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: url("Background.jpg") no-repeat center center fixed; /* 🔥 Заменить ссылкой на фон */
+      background-size: cover;
+      color: #222;
+    }
+
+    /* 📜 Контейнер */
+    .container {
+      max-width: 900px;
+      margin: 100px auto 50px;
+      background: rgba(255, 255, 255, 0.92);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+
+    /* 🎌 Заголовки */
+    h1 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #c2185b;
+      border-bottom: 2px solid #f8bbd0;
+      padding-bottom: 6px;
+    }
+
+    /* 📋 Списки */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin: 8px 0;
+      padding: 6px 10px;
+      background: #fff0f5;
+      border-radius: 8px;
+    }
+
+    /* 🌸 Логотипы */
+    .topbar {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.75); /* 🔥 Фон */
+      padding: 5px 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+    .topbar img {
+      height: 50px;
+      width: auto;
+      border-radius: 8px;
+    }
+    .center-logo {
+      display: block;
+      margin: 20px auto;
+      height: 120px;
+      width: 120px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    /* 🌐 Кнопки выбора языка */
+    .lang-switcher {
+      position: fixed;
+      top: 10px;
+      right: 15px;
+      display: flex;
+      gap: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.75); /* 🔥 Фон */
+      padding: 5px 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+    .lang-switcher span {
+      transition: transform 0.2s;
+    }
+    .lang-switcher span:hover {
+      transform: scale(1.2);
+    }
+
+    /* 🌸 Нижний текст */
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔥 Логотип слева сверху -->
+  <div class="topbar">
+    <img src="Astana_IT_University.png" alt="Club Logo"> <!-- 🔥 Заменить ссылкой на маленький логотип -->
+  </div>
+
+  <!-- 🔥 Переключатель языков -->
+  <div class="lang-switcher">
+    <span onclick="setLang('en')">🇬🇧</span>
+    <span onclick="setLang('ru')">🇷🇺</span>
+    <span onclick="setLang('kz')">🇰🇿</span>
+    <span onclick="setLang('jp')">🇯🇵</span>
+  </div>
+
+  <!-- 🔥 Логотип по центру -->
+  <img class="center-logo" src="Logo.PNG" alt="JCA Logo"> <!-- 🔥 Заменить ссылкой на квадратный логотип -->
+
+  <!-- 📜 Контент -->
+  <div class="container" id="rules-container">
+    <!-- сюда будет подставляться текст -->
+  </div>
+
+  <script>
+    const texts = {
+      en: `
+        <h1>📜 JCA AITU Chat – Rules!</h1>
+        <p><b>Japan Culture Association</b></p>
+
+        <h2>🚫 Forbidden:</h2>
+        <ul>
+          <li>• Insulting or attacking members (gomenasai doesn’t mean hurting others).</li>
+          <li>• Mocking or disrespecting Japanese culture. If admins find your joke offensive → mute.</li>
+          <li>• Discrimination by gender, race, social status, religion, etc.</li>
+          <li>• Discussing politics or other controversial topics.</li>
+          <li>• Ads, links, polls without permission.</li>
+          <li>• Spam, flood, bad language.</li>
+          <li>• Leaking private data or spreading rumors.</li>
+          <li>• Promoting religion, drugs, pedophilia, etc.</li>
+        </ul>
+
+        <h2>⏰ Restrictions:</h2>
+        <ul>
+          <li>• No chatting between 23:00 and 08:00 (oyasumi minna-san 🌙).</li>
+          <li>• Non-staff cannot control club resources or act as leaders.</li>
+          <li>• Before doing something important, check with a senpai from staff.</li>
+        </ul>
+
+        <h2>⚔️ Punishments:</h2>
+        <ul>
+          <li>• 1 violation = warning.</li>
+          <li>• 3 warnings = ban.</li>
+          <li>• Serious violations → instant mute/ban.</li>
+        </ul>
+
+        <h2>🌸 Main Rule:</h2>
+        <p>Feel free to chat, but respect each other.<br>
+        "Don’t disturb the peace and always respect Japanese culture. Arigatou!"</p>
+
+        <h2>📝 Notes:</h2>
+        <p>Staff decisions are final and not discussed in the main chat.<br>
+        Suggestions or complaints → Chat Manager <a href="https://t.me/axeelias">@axeelias</a>.</p>
+
+        <div class="footer">🌸 Stay kind, stay respectful. 🌸</div>
+      `,
+      ru: `
+        <h1>📜 JCA AITU Chat – Правила!</h1>
+        <p><b>Japan Culture Association</b></p>
+
+        <h2>🚫 Запрещено:</h2>
+        <ul>
+          <li>• Оскорблять участников и переходить на личности.</li>
+          <li>• Унижать или высмеивать японскую культуру. Если админы сочтут шутку оскорбительной → mute.</li>
+          <li>• Дискриминация по полу, расе, религии и др.</li>
+          <li>• Обсуждать политику и спорные темы.</li>
+          <li>• Реклама, ссылки, опросы без согласования.</li>
+          <li>• Спам, флуд, маты.</li>
+          <li>• Слив личных данных или переписок.</li>
+          <li>• Пропаганда религий, наркотиков, педофилии и пр.</li>
+        </ul>
+
+        <h2>⏰ Ограничения:</h2>
+        <ul>
+          <li>• Нельзя писать с 23:00 до 08:00 (oyasumi minna-san 🌙).</li>
+          <li>• Только staff управляет делами клуба.</li>
+          <li>• Перед важными действиями — советуйтесь с senpai.</li>
+        </ul>
+
+        <h2>⚔️ Наказания:</h2>
+        <ul>
+          <li>• 1 нарушение = предупреждение.</li>
+          <li>• 3 предупреждения = ban.</li>
+          <li>• Серьёзные нарушения → mute/ban сразу.</li>
+        </ul>
+
+        <h2>🌸 Главное правило:</h2>
+        <p>Общайтесь свободно, уважая друг друга.<br>
+        "Не нарушайте покой и уважайте японскую культуру. Arigatou!"</p>
+
+        <h2>📝 Замечания:</h2>
+        <p>Решения staff не обсуждаются в чате.<br>
+        Предложения → Chat Manager <a href="https://t.me/axeelias">@axeelias</a>.</p>
+
+        <div class="footer">🌸 Доброта и уважение — превыше всего. 🌸</div>
+      `,
+      kz: `
+        <h1>📜 JCA AITU Chat – Ережелер!</h1>
+        <p><b>Japan Culture Association</b></p>
+
+        <h2>🚫 Тыйым салынған:</h2>
+        <ul>
+          <li>• Қатысушыларды ренжіту, мазақ ету.</li>
+          <li>• Жапон мәдениетін қорлау немесе бұрмалау → mute.</li>
+          <li>• Гендерлік, нәсілдік, діни кемсіту.</li>
+          <li>• Саясат пен даулы тақырыптар.</li>
+          <li>• Реклама, сілтемелер, сауалнамалар (келісімсіз).</li>
+          <li>• Спам, флуд, боғауыз.</li>
+          <li>• Жеке мәліметтерді жариялау.</li>
+          <li>• Дін, есірткі, педофилияны насихаттау.</li>
+        </ul>
+
+        <h2>⏰ Шектеулер:</h2>
+        <ul>
+          <li>• 23:00 – 08:00 аралығында жазуға болмайды (oyasumi minna-san 🌙).</li>
+          <li>• Staff құрамына кірмейтіндер клуб істерін басқара алмайды.</li>
+          <li>• Маңызды әрекеттерді senpai-мен ақылдасыңыз.</li>
+        </ul>
+
+        <h2>⚔️ Жаза:</h2>
+        <ul>
+          <li>• 1 бұзу = ескерту.</li>
+          <li>• 3 ескерту = ban.</li>
+          <li>• Қатты бұзушылық → mute/ban бірден.</li>
+        </ul>
+
+        <h2>🌸 Басты қағида:</h2>
+        <p>Әрқашан бір-біріңізді құрметтеңіз.<br>
+        "Жалпы тыныштықты бұзбаңыздар, Жапон мәдениетін құрметтеңіздер. Arigatou!"</p>
+
+        <h2>📝 Ескерту:</h2>
+        <p>Staff шешімдері талқыланбайды.<br>
+        Ұсыныстар → Chat Manager <a href="https://t.me/axeelias">@axeelias</a>.</p>
+
+        <div class="footer">🌸 Ізгілік пен құрмет — бастысы. 🌸</div>
+      `,
+      jp: `
+        <h1>📜 JCA AITU チャット – ルール!</h1>
+        <p><b>Japan Culture Association</b></p>
+
+        <h2>🚫 禁止事項:</h2>
+        <ul>
+          <li>• メンバーを侮辱したり攻撃すること。</li>
+          <li>• 日本文化を馬鹿にしたり歪めたりすること → mute。</li>
+          <li>• 性別、人種、宗教などによる差別。</li>
+          <li>• 政治や論争的な話題。</li>
+          <li>• 無許可の広告、リンク、アンケート。</li>
+          <li>• スパム、荒らし、悪口。</li>
+          <li>• 個人情報や会話を漏らすこと。</li>
+          <li>• 宗教、薬物、児童ポルノの宣伝。</li>
+        </ul>
+
+        <h2>⏰ 制限:</h2>
+        <ul>
+          <li>• 23:00～08:00 の間は書き込み禁止 (oyasumi minna-san 🌙)。</li>
+          <li>• Staff 以外はクラブの運営に関与できない。</li>
+          <li>• 重要な行動をする前に senpai に確認してください。</li>
+        </ul>
+
+        <h2>⚔️ 処罰:</h2>
+        <ul>
+          <li>• 1回の違反 = 警告。</li>
+          <li>• 3回の警告 = ban。</li>
+          <li>• 深刻な違反 → 即 mute/ban。</li>
+        </ul>
+
+        <h2>🌸 メインルール:</h2>
+        <p>お互いを尊重して自由に話しましょう。<br>
+        "みんなの平和を乱さず、日本文化を尊重してください。ありがとう!"</p>
+
+        <h2>📝 注意:</h2>
+        <p>Staff の決定は最終で、チャット内で議論できません。<br>
+        提案 → Chat Manager <a href="https://t.me/axeelias">@axeelias</a>.</p>
+
+        <div class="footer">🌸 思いやりと尊敬を忘れずに。🌸</div>
+      `
+    };
+
+    function setLang(lang) {
+      document.getElementById("rules-container").innerHTML = texts[lang];
+    }
+
+    // По умолчанию английский
+    setLang('en');
+  </script>
+
+
+</body>
+</html>
