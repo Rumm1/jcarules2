@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -110,11 +109,16 @@
       height: 24px;
       font-weight: 700;
       font-size: 14px;
-      color: #fff;
-      background: linear-gradient(to bottom, #143588 0%, #143588 33%, #fff 33%, #fff 66%, #d52b1e 66%, #d52b1e 100%);
       border-radius: 3px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.3);
       text-transform: uppercase;
+      background: white;
+    }
+    .lang-ru .r {
+      color: #143588; /* Синий цвет для R */
+    }
+    .lang-ru .u {
+      color: #d52b1e; /* Красный цвет для U */
     }
 
     /* 🌸 Нижний текст */
@@ -136,13 +140,13 @@
   <!-- 🔥 Переключатель языков -->
   <div class="lang-switcher">
     <span onclick="setLang('en')">🇬🇧</span>
-    <span onclick="setLang('ru')" class="lang-ru">ru</span>
     <span onclick="setLang('kz')">🇰🇿</span>
     <span onclick="setLang('jp')">🇯🇵</span>
+    <span onclick="setLang('ru')" class="lang-ru"><span class="r">R</span><span class="u">U</span></span>
   </div>
 
   <!-- 🔥 Логотип по центру -->
-  <img class="center-logo" src="Logo.PNG" alt="JCA Logo"> <!-- 🔥 Заменить ссылкой на квадратный логотип -->
+  <img class="center-logo" src="https://placehold.co/120x120/ff6b6b/white?text=JCA" alt="JCA Logo">
 
   <!-- 📜 Контент -->
   <div class="container" id="rules-container">
@@ -320,8 +324,5 @@
     // По умолчанию английский
     setLang('en');
   </script>
-
-
 </body>
 </html>
-
