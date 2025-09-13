@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background: url("Background.jpg") no-repeat center center fixed;
+      background: url("Astana_IT_University.png") no-repeat center center fixed;
       background-size: cover;
       color: #222;
     }
@@ -92,6 +92,7 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
       z-index: 1000;
+      align-items: center;
     }
     .lang-switcher span {
       transition: transform 0.2s;
@@ -113,12 +114,9 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.3);
       text-transform: uppercase;
       background: white;
-    }
-    .lang-ru .r {
-      color: #143588; /* Синий цвет для R */
-    }
-    .lang-ru .u {
-      color: #d52b1e; /* Красный цвет для U */
+      color: #d52b1e; /* Красный цвет для обеих букв */
+      position: relative;
+      top: 2px; /* Спускаем надпись вниз */
     }
 
     /* 🌸 Нижний текст */
@@ -134,7 +132,7 @@
 
   <!-- 🔥 Логотип слева сверху -->
   <div class="topbar">
-    <img src="Astana_IT_University.png" alt="Club Logo">
+    <img src="Astana_IT_University.png" alt="AITU Logo">
   </div>
 
   <!-- 🔥 Переключатель языков -->
@@ -142,11 +140,11 @@
     <span onclick="setLang('en')">🇬🇧</span>
     <span onclick="setLang('kz')">🇰🇿</span>
     <span onclick="setLang('jp')">🇯🇵</span>
-    <span onclick="setLang('ru')" class="lang-ru"><span class="r">R</span><span class="u">U</span></span>
+    <span onclick="setLang('ru')" class="lang-ru">RU</span>
   </div>
 
   <!-- 🔥 Логотип по центру -->
-  <img class="center-logo" src="Logo.PNG" alt="JCA Logo">
+  <img class="center-logo" src="Logo.png" alt="JCA Logo">
 
   <!-- 📜 Контент -->
   <div class="container" id="rules-container">
@@ -187,7 +185,7 @@
 
         <h2>🌸 Main Rule:</h2>
         <p>Feel free to chat, but respect each other.<br>
-        "Don’t disturb the peace and always respect Japanese culture. Arigatou!"</p>
+        "Don't disturb the peace and always respect Japanese culture. Arigatou!"</p>
 
         <h2>📝 Notes:</h2>
         <p>Staff decisions are final and not discussed in the main chat.<br>
@@ -255,7 +253,7 @@
         <ul>
           <li>• 23:00 – 08:00 аралығында жазуға болмайды (oyasumi minna-san 🌙).</li>
           <li>• Staff құрамына кірмейтіндер клуб істерін басқара алмайды.</li>
-          <li>• Маңызды әрекеттерді senpai-мен ақылдасыңыз.</li>
+          <li>• Маңызды әрекеттерді senpai-мен ақылдасыңіз.</li>
         </ul>
 
         <h2>⚔️ Жаза:</h2>
@@ -326,5 +324,3 @@
   </script>
 </body>
 </html>
-
-
