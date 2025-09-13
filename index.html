@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +11,7 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background: url("Background.jpg") no-repeat center center fixed; /* 🔥 Заменить ссылкой на фон */
+      background: url("https://placekitten.com/1600/900") no-repeat center center fixed;
       background-size: cover;
       color: #222;
     }
@@ -57,7 +58,7 @@
       left: 10px;
       display: flex;
       align-items: center;
-      background: rgba(255, 255, 255, 0.75); /* 🔥 Фон */
+      background: rgba(255, 255, 255, 0.75);
       padding: 5px 10px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -87,7 +88,7 @@
       gap: 10px;
       font-size: 24px;
       cursor: pointer;
-      background: rgba(255, 255, 255, 0.75); /* 🔥 Фон */
+      background: rgba(255, 255, 255, 0.75);
       padding: 5px 10px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -98,6 +99,22 @@
     }
     .lang-switcher span:hover {
       transform: scale(1.2);
+    }
+    
+    /* Специальный стиль для русской кнопки */
+    .lang-ru {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 24px;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+      background: linear-gradient(to bottom, #143588 0%, #143588 33%, #fff 33%, #fff 66%, #d52b1e 66%, #d52b1e 100%);
+      border-radius: 3px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      text-transform: uppercase;
     }
 
     /* 🌸 Нижний текст */
@@ -113,13 +130,13 @@
 
   <!-- 🔥 Логотип слева сверху -->
   <div class="topbar">
-    <img src="Astana_IT_University.png" alt="Club Logo"> <!-- 🔥 Заменить ссылкой на маленький логотип -->
+    <img src="https://placehold.co/50x50/ff6b6b/white?text=JCA" alt="Club Logo">
   </div>
 
   <!-- 🔥 Переключатель языков -->
   <div class="lang-switcher">
     <span onclick="setLang('en')">🇬🇧</span>
-    <span onclick="setLang('ru')">🇷🇺</span>
+    <span onclick="setLang('ru')" class="lang-ru">ru</span>
     <span onclick="setLang('kz')">🇰🇿</span>
     <span onclick="setLang('jp')">🇯🇵</span>
   </div>
@@ -307,3 +324,4 @@
 
 </body>
 </html>
+
